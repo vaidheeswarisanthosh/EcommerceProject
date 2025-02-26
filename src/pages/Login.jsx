@@ -13,7 +13,7 @@ const Login = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3002/api/auth/login", user);
+      const response = await axios.post("https://ecommerceproject-os5e.onrender.com/api/auth/login", user);
       localStorage.setItem("authToken", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       onLogin();

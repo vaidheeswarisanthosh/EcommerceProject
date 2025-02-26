@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3002/api/auth/register", user);
+      await axios.post("https://ecommerceproject-os5e.onrender.com/api/auth/register", user);
       alert("Registration successful! Please login.");
       navigate("/login");
     } catch (error) {
